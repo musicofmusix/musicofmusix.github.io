@@ -1,0 +1,28 @@
+<!-- Category Content Row -->
+<div class="flex flex-row items-stretch">
+    <!-- Left border column -->
+    <div class="w-4 border-t border-r border-black shrink-0"></div>
+  
+    <!-- Grid container -->
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))]  w-full gap-0 border-t bg-white">
+      {% assign category = include.category %}
+      {% for post in site.categories[category] %}
+        <a class="group bg-white hover:bg-black flex flex-col justify-between p-2 gap-1 outline-1 outline-black" href="{{ post.url }}">
+          <div class="flex flex-row items-center">
+              <div class="w-2 h-2 bg-black group-hover:bg-white mr-2"></div>
+              <div class="font-normal font-[IBM_Plex_Mono] text-black group-hover:text-white break-words">
+                {{ post.date | date: "%Y-%m-%d" }} 
+              </div>
+          </div>
+          <div class="font-medium font-[Inter] text-2xl text-black group-hover:text-white uppercase break-words">
+            {{ post.title }}
+          </div>
+          <div class="relative w-full aspect-[2/3] overflow-hidden">
+            <img src="{{ post.thumbnail }}" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+    <!-- Right border column -->
+    <div class="w-4 border-t border-l border-black shrink-0"></div>
+  </div>

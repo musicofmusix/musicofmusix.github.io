@@ -1,0 +1,20 @@
+<!-- Gallery Body Block -->
+<div class="flex flex-row justify-between">
+    <div class="border-t border-r border-black w-4 shrink-0"></div>
+    <div class="flex-1 border-0 sm:border-r sm:border-t border-black"></div>
+    <div class="min-w-0 sm:w-2/3 border-t border-black p-4">
+      {% assign dir = page.image_dir %}
+      {% assign files = site.static_files | where_exp: "file", "file.path contains dir" %}
+
+      <div class="grid grid-cols-1  gap-4 w-full">
+        {% for file in files %}
+          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.webp' %}
+            <img src="{{ file.path }}" alt="{{ file.name }}" class="w-full h-auto">
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="flex-1 border-0 sm:border-t sm:border-l border-black"></div>
+    <div class="border-t border-l border-black w-4 shrink-0"></div>
+</div>
+

@@ -1,0 +1,16 @@
+<!-- Category Title Row -->
+<div class="flex flex-row h-32 border-t border-black overflow-hidden w-full">
+    <div class="flex flex-row whitespace-nowrap items-center w-fit animate-[marquee_30s_linear_infinite]">
+      <p class="text-[8.5rem] font-normal font-[Inter] tracking-[-0.03em] leading-none uppercase">
+        {% for i in (1..{{include.repeat}}) %}
+          {{ include.text }}&nbsp;
+        {% endfor %}
+      </p>
+      <p class="text-[8.5rem] font-normal font-[Inter] tracking-[-0.03em] leading-none uppercase">
+        {% for i in (1..{{include.repeat}}) %}
+          {{ include.text }}&nbsp;
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+  

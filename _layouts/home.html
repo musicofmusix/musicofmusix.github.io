@@ -1,0 +1,29 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html lang="en-GB">
+
+{% include head.html %}
+  
+<body class="m-0 h-full flex flex-col min-w-[300px]:">
+  {% include spacer.html %}
+  {% include navbar.html %}
+
+  {% include title_carousel.html text="About Me" repeat=10 %}
+  {% include home/content_about.html %}
+
+  {% include title_carousel.html text="Research" repeat=10 %}
+  {% include home/content_full.html category="research" %}
+      
+  {% include title_carousel.html text="Photography" repeat=7 %}
+  {% include home/content_compact.html category="photography" %}
+
+  {% include title_carousel.html text="Interactive Media" repeat=5 %}
+  {% include home/content_full.html category="interactive" %}
+
+  {% include title_carousel.html text="Extras" repeat=12 %}
+  {% include home/content_compact.html category="extra" %}
+
+  {% include spacer_bottom.html %}
+</body>
+
+</html>

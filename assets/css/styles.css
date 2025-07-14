@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* === General Markdown Styling === */
+.markdown {
+  color: black;
+  
+}
+
+.markdown p {
+  padding-top: 1rem;
+  line-height: 1.75;
+}
+
+.markdown a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* === Headings === */
+
+/* H1 with bullet and full-width underline */
+.markdown h1 {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+}
+
+.markdown h1::before {
+  content: '';
+  position: absolute;
+  top: 2.4rem;
+  left: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: black;
+}
+
+.markdown h1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  background-color: black;
+  transform: translate(-50vw, 0.6rem);
+}
+
+/* H2 with local underline */
+.markdown h2 {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-top: 1.5rem;
+}
+
+.markdown h2::after {
+  content: '';
+  position: absolute;
+  top: 0.75rem;
+  left: -16px;
+  width: calc(100% + 32px);
+  height: 1px;
+  background-color: black;
+}
+
+/* H3 as italic subhead */
+.markdown h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* === Lists === */
+
+.markdown ul,
+.markdown ol {
+  padding-left: 2rem;
+  margin: 0.75rem 0;
+}
+
+.markdown ul {
+  list-style-type: square;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+}
+
+.markdown ul li,
+.markdown ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Tables (Kramdown) === */
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* === MathJax Block Equations === */
+
+mjx-container[display="true"] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+mjx-container[display="true"] > mjx-math {
+  min-width: fit-content;
+}
