@@ -17,7 +17,7 @@ permalink: /siggraphposters25
 [SIGGRAPH Posters 2025 Abstract](/assets/misc/siggraph_abstract.pdf) | [SIGGRAPH Posters 2025 Poster](/assets/misc/siggraph_poster.pdf) | Source Code (Coming Soon)
 
 # Acknowledgements
-I'm extremely grateful to [Professor Michael Brown](http://www.cse.yorku.ca/~mbrown) and [Dr. Hakki Karaimer](https://karaimer.github.io) for their guidance and feedback, as well as [Professor Kyros Kutulakos](https://www.cs.toronto.edu/~kyros) for giving me chance to begin this project.
+I'm extremely grateful to [Professor Michael Brown](http://www.cse.yorku.ca/~mbrown) and [Dr. Hakki Karaimer](https://karaimer.github.io) for their guidance and feedback, as well as [Professor Kyros Kutulakos](https://www.cs.toronto.edu/~kyros) for giving me a chance to begin this project.
 
 # Introduction
 ## Motivation
@@ -124,7 +124,7 @@ $$
 with 30 parameters (9 + 12 + 9) and 36 if including bias terms for the two matrices.
 
 ## Key Difference from Digital Radiometric Calibration
-Digital‑camera pipelines use WB + CST -> nonlinear tone curves -> (optionally) nonlinear gamut mapping. Our film model replaces the arbitrary nonlinear tone curves with a physically motivated sigmoid and **adds the second matrix $M_{\mathrm{film} \rightarrow\mathrm{scan}}$** after the characteristic curves stage to account for the extra scanning step absent in digital‑only workflows.
+Digital‑camera pipelines use WB + CST -> nonlinear tone curves -> (optionally) nonlinear gamut mapping. Our film model replaces the arbitrary nonlinear tone curves with physically motivated sigmoids and **adds the second matrix $M_{\mathrm{film} \rightarrow\mathrm{scan}}$** after the characteristic curves stage to account for the extra scanning step absent in digital‑only workflows.
 ## $M_{\mathrm{digital} \rightarrow \mathrm{film}}^{-1}$ in place of $M_{\mathrm{film} \rightarrow\mathrm{scan}}$
 When the same digital camera both photographs the scene and scans the developed film, the two spectral‑sensitivity sets coincide. In that case, $M_2$ can be replaced by $M_1^{-1}$, dropping 9 (12 if including bias) parameters with negligible loss of accuracy (see Section [Experimental Results](#experimental-results)).
 
