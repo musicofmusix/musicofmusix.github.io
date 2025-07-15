@@ -3,7 +3,7 @@
 /* === General Markdown Styling === */
 .markdown {
   color: black;
-  
+  font-size: 0.875rem;
 }
 
 .markdown p {
