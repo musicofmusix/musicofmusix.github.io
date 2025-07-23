@@ -5,18 +5,16 @@
 {% include head.html %}
 
 <body class="m-0 h-full flex flex-col min-w-[300px]:">
-    {% include spacer.html %}
+  {% include spacer.html %}
+  {% include navbar.html %}
   
-    {% include navbar.html %}
-    
-    {% assign title=page.title %}
-    {% assign repeat=page.title_repeat %}
-    {% include title_carousel.html text=title repeat=repeat %}
-    {% include comment.html %}
+  {% assign title=page.title %}
+  {% assign repeat=page.title_repeat %}
+  {% include title_carousel.html text=title repeat=repeat %}
+  {% include comment.html %}
 
-    {% include gallery/body.html %}
+  {% include gallery/body.html %}
 
-    {% include spacer_bottom.html %}
-  </body>
-
+  {% include spacer_bottom.html %}
+</body>
 </html>
