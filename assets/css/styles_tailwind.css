@@ -11,6 +11,11 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-3xs: 16rem;
+    --container-2xs: 18rem;
+    --container-xs: 20rem;
+    --container-sm: 24rem;
+    --container-2xl: 42rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -268,6 +273,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-3xs {
+    max-width: var(--container-3xs);
+  }
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
   }
@@ -391,6 +399,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
   }
   .text-center {
     text-align: center;
@@ -581,6 +592,8 @@
 }
 .markdown p {
   line-height: 1.75;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 .markdown a {
   text-decoration: underline;

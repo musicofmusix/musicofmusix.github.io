@@ -8,6 +8,8 @@
 
 .markdown p {
   line-height: 1.75;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .markdown a {
