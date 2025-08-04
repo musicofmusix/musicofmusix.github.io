@@ -1,7 +1,7 @@
 ---
 layout: gallery
 categories: photography
-title: "Toronto Summer"
+title: "Toronto 2"
 title_repeat: 7
 comment: "Fujifilm X100V + Fujifilm X-Pro3 + Leica M10"
 date: 2024-07-24
