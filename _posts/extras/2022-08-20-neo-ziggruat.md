@@ -1,7 +1,7 @@
 ---
 layout: gallery
 categories: extra
-title: "Neo Ziggurat"
+title: "Neo-Ziggurat"
 title_repeat: 8
 comment: "Maxon Cinema 4D"
 date: 2022-08-20
