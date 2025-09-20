@@ -1,7 +1,7 @@
 ---
 layout: gallery
 categories: photography
-title: "Toronto B"
+title: "Toronto II"
 title_repeat: 7
 comment: "Fujifilm X100V + Fujifilm X-Pro3 + Leica M10"
 date: 2024-07-24

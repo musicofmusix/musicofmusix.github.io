@@ -17,7 +17,8 @@
           <div class="flex-1 font-medium font-[Inter] text-2xl text-black group-hover:text-white uppercase break-words">
             {{ post.title }}
           </div>
-          <div class="relative w-full aspect-[2/3] overflow-hidden">
+          {% assign image_aspect = include.image_aspect %}
+          <div class="relative w-full aspect-[{{ image_aspect }}] overflow-hidden">
             <img src="{{ post.thumbnail }}" class="absolute inset-0 w-full h-full object-cover" />
           </div>
         </a>

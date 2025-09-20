@@ -3,12 +3,12 @@
 /* === General Markdown Styling === */
 .markdown {
   color: black;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* same as text-sm */
 }
 
 .markdown p {
   line-height: 1.75;
-  margin-top: 0.75rem;
+  /*margin-top: 0.75rem;*/
   margin-bottom: 0.75rem;
 }
 
@@ -126,3 +126,11 @@ mjx-container[display="true"] {
 mjx-container[display="true"] > mjx-math {
   min-width: fit-content;
 }
+
+.aspect-\[2\/3\] {
+    aspect-ratio: 2/3;
+  }
+
+ .aspect-\[1\/1\.41\] {
+    aspect-ratio: 1/1.41;
+  }

@@ -12,7 +12,7 @@
                     <div class="flex flex-row items-center">
                         <div class="w-2 h-2 bg-black mr-2"></div>
                         <div class="font-normal font-[IBM_Plex_Mono] text-sm break-words">
-                            {{ post.date | date: "%Y-%m-%d" }}   
+                            {{ post.date | date: "%Y-%m-%d" }}
                         </div>
                     </div>
                     <div class="font-medium font-[Inter] text-2xl uppercase break-words">
@@ -28,17 +28,11 @@
                 </div>
             </div>
             <div class="sm:w-1/2 xl:w-2/3 flex flex-col justify-between items-center p-4 h-full">
-                <!-- Spacer -->
-                <div class="flex-grow"></div>
-            
-                <!-- Centered Text -->
+                <!-- Text -->
                 <div class="markdown w-full font-normal font-[IBM_Plex_Mono] text-left break-words">
                     {{ post.abstract | markdownify }}
                 </div>
 
-                <!-- Spacer -->
-                <div class="flex-grow"></div>
-            
                 <!-- Button at the bottom -->
                 <a class="w-full inline-flex items-center justify-center px-4 py-2 font-[IBM_Plex_Mono] text-sm text-black bg-neutral-200 border-1 border-black rounded-full hover:text-white hover:bg-black"
                 href="{{ post.url }}">

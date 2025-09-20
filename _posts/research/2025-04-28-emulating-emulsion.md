@@ -4,10 +4,10 @@ categories: research
 title: "Emulating Emulsion"
 title_repeat: 5
 subtitle: "A Compact, Physically-Based Model for Film Colour"
-comment: "SIGGRAPH Posters 2025, Vancouver, Canada"
+comment: "ACM SIGGRAPH 2025 Posters"
 date: 2025-04-28
 abstract: >
- We present a compact, physically-based model that faithfully emulates the colour response of positive photographic film from a digital RAW image. Unlike hand-crafted look-up tables (LUT) or data-hungry neural networks, our approach analytically mirrors the film "capture-develop–scan" chain, all with around 30 trainable parameters. Least-squares optimisation on 3168 colour patch pairs captured on one roll of Fujifilm VELVIA 100 achieves colour chart root-mean-squared-error (RMSE) 1.3 % with no interpolation artefacts. Additionally, qualitative comparisons show the proposed model more closely matches real film than Fujifilm’s proprietary VELVIA "film simulation". The continuous model can also be discretised into LUTs of any resolution, offering production-ready film emulation and a path for archival of discontinued stocks.
+ We present a compact, physically-based model that faithfully emulates the colour response of positive photographic film from a digital RAW image. Unlike hand-crafted look-up tables (LUT) or data-hungry neural networks, our approach analytically mirrors the film "capture-develop–scan" chain, all with around 30 trainable parameters. Least-squares optimisation is performed on 3168 colour patch pairs captured on one roll of Fujifilm VELVIA 100. Qualitative comparisons show the proposed model more closely matches real film than proprietary methods, and offers artefact-free rendering over discrete LUTs. The continuous model offers production-ready film emulation and a path for archival of discontinued stocks.
 thumbnail: /assets/img/emulating-emulsion/headliner.webp
 permalink: /siggraphposters25
 ---
