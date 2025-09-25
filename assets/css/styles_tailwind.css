@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-cyan-400: oklch(78.9% 0.154 211.53);
-    --color-pink-400: oklch(71.8% 0.202 349.761);
     --color-neutral-200: oklch(92.2% 0 0);
     --color-black: #000;
     --color-white: #fff;
@@ -22,9 +20,6 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -244,9 +239,6 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
@@ -270,9 +262,6 @@
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-  .w-24 {
-    width: calc(var(--spacing) * 24);
   }
   .w-auto {
     width: auto;
@@ -389,23 +378,11 @@
   .border-black {
     border-color: var(--color-black);
   }
-  .bg-\[\#00A84D\] {
-    background-color: #00A84D;
-  }
-  .bg-\[00A84D\] {
-    background-color: 00A84D;
-  }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-cyan-400 {
-    background-color: var(--color-cyan-400);
-  }
   .bg-neutral-200 {
     background-color: var(--color-neutral-200);
-  }
-  .bg-pink-400 {
-    background-color: var(--color-pink-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -480,17 +457,11 @@
   .break-words {
     overflow-wrap: break-word;
   }
-  .break-all {
-    word-break: break-all;
-  }
   .whitespace-nowrap {
     white-space: nowrap;
   }
   .text-black {
     color: var(--color-black);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
@@ -643,16 +614,6 @@
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  .xl\:w-1\/3 {
-    @media (width >= 80rem) {
-      width: calc(1/3 * 100%);
-    }
-  }
-  .xl\:w-2\/3 {
-    @media (width >= 80rem) {
-      width: calc(2/3 * 100%);
     }
   }
 }
