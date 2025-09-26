@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+  ::selection {
+    @apply bg-black text-white;
+  }
+}
+
 /* === General Markdown Styling === */
 .markdown {
   color: black;

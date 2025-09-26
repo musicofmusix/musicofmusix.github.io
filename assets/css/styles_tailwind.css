@@ -617,6 +617,12 @@
     }
   }
 }
+@layer base {
+  ::selection {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
 .markdown {
   color: black;
   font-size: 0.875rem;
