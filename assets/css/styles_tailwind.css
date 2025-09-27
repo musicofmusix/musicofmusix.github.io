@@ -20,6 +20,7 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --tracking-tight: -0.025em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -411,12 +412,6 @@
   .text-justify {
     text-align: justify;
   }
-  .text-left {
-    text-align: left;
-  }
-  .font-\[IBM_Plex_Mono\] {
-    font-family: IBM Plex Mono;
-  }
   .font-\[Inter\] {
     font-family: Inter;
   }
@@ -618,6 +613,10 @@
   }
 }
 @layer base {
+  body {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
   ::selection {
     background-color: var(--color-black);
     color: var(--color-white);
@@ -625,15 +624,19 @@
 }
 .markdown {
   color: black;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .markdown p {
-  line-height: 1.75;
+  line-height: 1.5;
   margin-bottom: 0.75rem;
 }
 .markdown a {
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 700;
+}
+.markdown a:hover {
+  background-color: black;
+  color: white;
 }
 .markdown h1 {
   position: relative;
@@ -665,7 +668,7 @@
 }
 .markdown h2 {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1rem;
   padding-bottom: 1rem;

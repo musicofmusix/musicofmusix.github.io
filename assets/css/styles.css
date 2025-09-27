@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
+  body {
+    @apply tracking-tight; /* or tracking-[ -0.02em ] */
+  }
   ::selection {
     @apply bg-black text-white;
   }
@@ -9,18 +12,23 @@
 /* === General Markdown Styling === */
 .markdown {
   color: black;
-  font-size: 0.875rem; /* same as text-sm */
+  font-size: 1rem;
 }
 
 .markdown p {
-  line-height: 1.75;
+  line-height: 1.5;
   /*margin-top: 0.75rem;*/
   margin-bottom: 0.75rem;
 }
 
 .markdown a {
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.markdown a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* === Headings === */
@@ -61,7 +69,7 @@
 /* H2 with local underline */
 .markdown h2 {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding-top: 1rem;
   padding-bottom: 1rem;

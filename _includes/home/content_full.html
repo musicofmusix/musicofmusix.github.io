@@ -11,25 +11,25 @@
                 <div class="flex flex-col gap-1">
                     <div class="flex flex-row items-center">
                         <div class="w-2 h-2 bg-black mr-2"></div>
-                        <div class="font-normal font-[IBM_Plex_Mono] text-sm break-words">
+                        <div class="font-medium font-[Inter] text-sm break-words">
                             {{ post.date | date: "%Y-%m-%d" }}
                         </div>
                     </div>
                     <div class="font-medium font-[Inter] text-2xl uppercase break-words">
                         {{ post.title }}
                     </div>
-                    <div class="font-normal font-[IBM_Plex_Mono] text-sm break-words">
+                    <div class="font-medium font-[Inter] text-sm break-words">
                         {{ post.subtitle }}
                     </div>
                 </div>
                 <img class="w-full h-auto" src="{{ post.thumbnail }}">
-                <div class="font-normal font-[IBM_Plex_Mono] text-sm break-words">
+                <div class="font-medium font-[Inter] text-sm break-words">
                     {{ post.comment }}
                 </div>
             </div>
             <div class="sm:w-3/6 border-t sm:border-r sm:border-t-0 border-black flex flex-col justify-between items-center p-4 h-full">
                 <!-- Text -->
-                <div class="markdown w-full font-normal font-[IBM_Plex_Mono] text-justify break-words">
+                <div class="markdown w-full font-medium font-[Inter] text-justify break-words">
                     {{ post.abstract | markdownify }}
                 </div>
             </div>
