@@ -11,19 +11,19 @@
                 <div class="flex flex-col gap-1">
                     <div class="flex flex-row items-center">
                         <div class="w-2 h-2 bg-black mr-2"></div>
-                        <div class="font-medium font-[Inter] text-sm break-words">
+                        <div class="font-medium font-[Inter] text-base break-words">
                             {{ post.date | date: "%Y-%m-%d" }}
                         </div>
                     </div>
                     <div class="font-medium font-[Inter] text-2xl uppercase break-words">
                         {{ post.title }}
                     </div>
-                    <div class="font-medium font-[Inter] text-sm break-words">
+                    <div class="font-medium font-[Inter] text-base break-words">
                         {{ post.subtitle }}
                     </div>
                 </div>
                 <img class="w-full h-auto" src="{{ post.thumbnail }}">
-                <div class="font-medium font-[Inter] text-sm break-words">
+                <div class="font-medium font-[Inter] text-base break-words">
                     {{ post.comment }}
                 </div>
             </div>
