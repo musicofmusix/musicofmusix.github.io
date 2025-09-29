@@ -17,7 +17,6 @@
 
 .markdown p {
   line-height: 1.5;
-  /*margin-top: 0.75rem;*/
   margin-bottom: 0.75rem;
 }
 
@@ -30,18 +29,22 @@
   color: white;
 }
 
+.markdown strong {
+  font-weight: 500;
+}
+
 /* === Headings === */
 
 /* H1 with bullet and full-width underline */
 .markdown h1 {
   position: relative;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 
   padding-top: 1.5rem;
   padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .markdown h1::before {
@@ -68,10 +71,10 @@
 /* H2 with local underline */
 .markdown h2 {
   position: relative;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 400;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .markdown h2::after {
