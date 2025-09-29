@@ -632,7 +632,6 @@
 }
 .markdown a {
   text-decoration: underline;
-  font-weight: 700;
 }
 .markdown a:hover {
   background-color: black;
