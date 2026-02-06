@@ -9,6 +9,6 @@ I am a 4th year Computer Science and Cognitive Science undergraduate student at 
 
 I am fortunate to be an undergraduate research assistant at the [Dynamic Graphics Project](https://www.dgp.toronto.edu) Lab, advised by [Prof. Karan Singh](https://www.dgp.toronto.edu/~karan/) and [Karran Pandey](https://karranpandey.github.io). Previously, I had the honour of working on [compact method for producing film-like colours from digital images](https://musicofmusix.github.io/siggraphposters25), under the kind supervision of [Prof. Michael Brown](http://www.cse.yorku.ca/~mbrown) and [Dr. Hakki Karaimer](https://karaimer.github.io), at [Samsung AI Center - Toronto](https://research.samsung.com/aicenter_toronto), published as a poster for [SIGGRAPH 2025](https://s2025.siggraph.org).
 
-My creative activities inspire my work; see a selection of them below!
+Creative activities inspire my work; see a selection of them below.
 
 **Email:** hyunjo.jang **at** mail.utoronto.ca
