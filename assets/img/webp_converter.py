@@ -2,21 +2,30 @@ import os
 from PIL import Image, ImageCms
 import argparse
 
-def ensure_srgb(image):
-    """Convert image to sRGB if it's not already."""
-    if not image.info.get('icc_profile'):
-        return image  # No ICC profile; assume it's already sRGB or unspecified
+def ensure_srgb(image: Image.Image) -> Image.Image:
+    icc = image.info.get("icc_profile")
+    if not icc:
+        return image
 
     try:
-        icc_profile = image.info.get('icc_profile')
-        src_profile = ImageCms.ImageCmsProfile(io.BytesIO(icc_profile))
+        src_profile = ImageCms.ImageCmsProfile(io.BytesIO(icc))
         dst_profile = ImageCms.createProfile("sRGB")
 
-        image = ImageCms.profileToProfile(image, src_profile, dst_profile, outputMode='RGB')
-        return image
+        has_alpha = ("A" in image.getbands())
+        out_mode = "RGBA" if has_alpha else "RGB"
+
+        # Convert image mode appropriately before applying profile
+        if has_alpha and image.mode != "RGBA":
+            image = image.convert("RGBA")
+        elif (not has_alpha) and image.mode != "RGB":
+            image = image.convert("RGB")
+
+        return ImageCms.profileToProfile(image, src_profile, dst_profile, outputMode=out_mode)
+
     except Exception as e:
         print(f"ICC profile conversion failed, using original image: {e}")
-        return image.convert("RGB")  # Fallback
+        # Fallback that PRESERVES alpha if present
+        return image.convert("RGBA") if ("A" in image.getbands()) else image.convert("RGB")
 
 def convert_image_to_webp(input_path, output_path, quality):
     try:
