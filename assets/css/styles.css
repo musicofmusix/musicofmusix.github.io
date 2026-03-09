@@ -2,14 +2,14 @@
 
 @layer base {
   body {
-    @apply tracking-tight; /* or tracking-[ -0.02em ] */
+    @apply tracking-tight;
   }
   ::selection {
     @apply bg-black text-white;
   }
 }
 
-/* === General Markdown Styling === */
+/* general */
 .markdown {
   color: black;
   font-size: 1rem;
@@ -33,9 +33,12 @@
   font-weight: 500;
 }
 
-/* === Headings === */
+.markdown video {
+  margin-bottom: 0.75rem;
+}
 
-/* H1 with bullet and full-width underline */
+/* headings */
+
 .markdown h1 {
   position: relative;
   font-size: 1.5rem;
@@ -68,7 +71,6 @@
   transform: translate(-50vw, 0.6rem);
 }
 
-/* H2 with local underline */
 .markdown h2 {
   position: relative;
   font-size: 1.25rem;
@@ -87,14 +89,13 @@
   background-color: black;
 }
 
-/* H3 as italic subhead */
 .markdown h3 {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
 }
 
-/* === Lists === */
+/* lists*/
 
 .markdown ul,
 .markdown ol {
@@ -115,7 +116,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* === Tables (Kramdown) === */
+/* tables */
 
 .markdown table {
   width: 100%;
@@ -130,7 +131,7 @@
   text-align: center;
 }
 
-/* === MathJax Block Equations === */
+/* mathjax */
 
 mjx-container[display="true"] {
   display: block;
