@@ -14,7 +14,7 @@ permalink: /siggraphposters25
 ![Main teaser figure](/assets/img/emulating-emulsion/headliner.webp)
 {{ page.abstract }}
 
-[SIGGRAPH Posters 2025 Abstract](/assets/misc/siggraph_abstract.pdf) | [Unofficial Full Paper](https://drive.google.com/file/d/15CgmzPsECNaqditBze36BHaQvblSkbXd/view?usp=sharing) | Source Code (Coming Soon)
+[SIGGRAPH Posters 2025 Abstract](/assets/misc/siggraph_abstract.pdf) | [Full Paper](https://drive.google.com/file/d/15CgmzPsECNaqditBze36BHaQvblSkbXd/view?usp=sharing)
 
 
 ![SIGGRAPH 2025 Poster](/assets/img/emulating-emulsion/poster_srgb.webp)
