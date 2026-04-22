@@ -18,8 +18,8 @@
             {{ post.title }}
           </div>
           {% assign image_aspect = include.image_aspect %}
-          <div class="relative w-full aspect-[{{ image_aspect }}] overflow-hidden">
-            <img src="{{ post.thumbnail }}" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="w-full aspect-[{{ image_aspect }}] overflow-hidden bg-[radial-gradient(#cccccc_1px,transparent_1px)] bg-[size:10px_10px] bg-white">
+            <img src="{{ post.thumbnail }}" class="w-full h-full object-cover opacity-0 transition-opacity duration-150" onload="this.style.opacity = 1"/>
           </div>
         </a>
       {% endfor %}

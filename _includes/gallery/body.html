@@ -9,8 +9,10 @@
       <div class="columns-1 md:columns-2 w-full gap-0">
         {% for file in files %}
           {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.webp' or file.extname == '.gif' %}
-            <a href="{{ file.path }}" target="_blank" class="cursor-pointer">
-              <img src="{{ file.path }}" alt="{{ file.name }}" class="w-full h-auto p-1">
+            <a href="{{ file.path }}" target="_blank" class="cursor-pointer block p-1">
+              <div class="w-full bg-white bg-[radial-gradient(#cccccc_1px,transparent_1px)] bg-[size:10px_10px]">
+                <img src="{{ file.path }}" alt="{{ file.name }}" class="block object-cover w-full h-auto opacity-0 transition-opacity duration-150" onload="this.style.opacity = 1">
+              </div>
             </a>
           {% endif %}
         {% endfor %}
