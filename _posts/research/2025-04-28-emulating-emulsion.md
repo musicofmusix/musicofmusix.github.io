@@ -20,7 +20,7 @@ permalink: /siggraphposters25
 ![SIGGRAPH 2025 Poster](/assets/img/emulating-emulsion/poster_srgb.webp)
 
 # Acknowledgements
-I'm extremely grateful to [Professor Michael Brown](http://www.cse.yorku.ca/~mbrown) and [Dr. Hakki Karaimer](https://karaimer.github.io) for their guidance and feedback, as well as [Professor Kyros Kutulakos](https://www.cs.toronto.edu/~kyros) for giving me a chance to begin this project.
+I am incredibly grateful to [Professor Michael Brown](http://www.cse.yorku.ca/~mbrown) and [Dr. Hakki Karaimer](https://karaimer.github.io) for their guidance and feedback, as well as [Professor Kyros Kutulakos](https://www.cs.toronto.edu/~kyros) for giving me a chance to begin this project.
 
 # Introduction
 ## Motivation

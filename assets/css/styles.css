@@ -17,7 +17,7 @@
 
 .markdown p {
   line-height: 1.5;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .markdown a {
@@ -45,15 +45,15 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-left: 2rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
 }
 
 .markdown h1::before {
   content: '';
   position: absolute;
-  top: 2.4rem;
+  top: 1.9rem;
   left: 0.5rem;
   width: 0.5rem;
   height: 0.5rem;
@@ -75,16 +75,16 @@
   position: relative;
   font-size: 1.25rem;
   font-weight: 400;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
 }
 
 .markdown h2::after {
   content: '';
   position: absolute;
   top: 0rem;
-  left: -16px;
-  width: calc(100% + 32px);
+  left: -8px;
+  width: calc(100% + 16px);
   height: 1px;
   background-color: black;
 }
