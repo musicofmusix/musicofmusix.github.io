@@ -46,18 +46,7 @@
   text-transform: uppercase;
 
   padding-top: 1rem;
-  padding-left: 2rem;
-  padding-bottom: 0.25rem;
-}
-
-.markdown h1::before {
-  content: '';
-  position: absolute;
-  top: 1.9rem;
-  left: 0.5rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: black;
+  padding-bottom: 0rem;
 }
 
 .markdown h1::after {
@@ -100,7 +89,12 @@
 .markdown ul,
 .markdown ol {
   padding-left: 2rem;
-  margin: 0.75rem 0;
+  margin-top: 0.5rem;
+}
+
+.markdown ul li,
+.markdown ol li {
+  margin-bottom: 0.5rem;
 }
 
 .markdown ul {
@@ -109,11 +103,6 @@
 
 .markdown ol {
   list-style-type: decimal;
-}
-
-.markdown ul li,
-.markdown ol li {
-  margin-bottom: 0.5rem;
 }
 
 /* tables */
