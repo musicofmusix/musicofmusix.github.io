@@ -25,11 +25,9 @@
                 <div class="w-full overflow-hidden bg-[radial-gradient(#cccccc_1px,transparent_1px)] bg-[size:10px_10px] bg-white">
                     <img src="{{ post.thumbnail }}" class="w-full h-full object-cover opacity-0" onload="this.style.opacity = 1"/>
                 </div>
-                <div class="font-[300] font-[Inter] text-base break-words">
-                    {{ post.comment }}
-                </div>
+                
             </div>
-            <div class="sm:w-3/6 border-t sm:border-r sm:border-t-0 border-black flex flex-col justify-between items-center p-2 h-full">
+            <div class="sm:w-3/6 border-t sm:border-r sm:border-t-0 border-black flex flex-col justify-between p-2 h-full">
                 <!-- Text -->
                 <div class="markdown w-full font-[300] font-[Inter] text-justify break-words">
                     {{ post.abstract | markdownify }}
