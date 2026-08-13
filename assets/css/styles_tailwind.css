@@ -237,6 +237,12 @@
   .inline-flex {
     display: inline-flex;
   }
+  .aspect-\[1\/1\.41\] {
+    aspect-ratio: 1/1.41;
+  }
+  .aspect-\[2\/3\] {
+    aspect-ratio: 2/3;
+  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -248,6 +254,9 @@
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
@@ -270,8 +279,8 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
   .w-auto {
     width: auto;
@@ -336,6 +345,9 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
@@ -350,9 +362,6 @@
   }
   .self-end {
     align-self: flex-end;
-  }
-  .self-start {
-    align-self: flex-start;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -409,6 +418,9 @@
   .bg-\[size\:10px_10px\] {
     background-size: 10px 10px;
   }
+  .fill-black {
+    fill: var(--color-black);
+  }
   .object-cover {
     object-fit: cover;
   }
@@ -429,9 +441,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-justify {
-    text-align: justify;
   }
   .font-\[Inter\] {
     font-family: Inter;
@@ -514,6 +523,13 @@
       }
     }
   }
+  .group-hover\:fill-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        fill: var(--color-white);
+      }
+    }
+  }
   .group-hover\:text-white {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -540,6 +556,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:h-20 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 20);
+    }
+  }
   .sm\:w-1\/2 {
     @media (width >= 40rem) {
       width: calc(1/2 * 100%);
@@ -548,11 +569,6 @@
   .sm\:w-1\/3 {
     @media (width >= 40rem) {
       width: calc(1/3 * 100%);
-    }
-  }
-  .sm\:w-1\/6 {
-    @media (width >= 40rem) {
-      width: calc(1/6 * 100%);
     }
   }
   .sm\:w-2\/3 {
@@ -565,14 +581,24 @@
       width: calc(2/6 * 100%);
     }
   }
-  .sm\:w-3\/6 {
+  .sm\:w-20 {
     @media (width >= 40rem) {
-      width: calc(3/6 * 100%);
+      width: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:w-24 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 24);
     }
   }
   .sm\:w-80 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 80);
+    }
+  }
+  .sm\:flex-1 {
+    @media (width >= 40rem) {
+      flex: 1;
     }
   }
   .sm\:flex-row {
@@ -653,10 +679,18 @@
 }
 .markdown {
   color: black;
+  font-family: Inter;
   font-size: 1rem;
-}
-.markdown p {
+  font-weight: 300;
+  text-align: justify;
+  overflow-wrap: break-word;
   line-height: 1.5;
+  --markdown-pad: 0.5rem;
+}
+.markdown > :last-child {
+  margin-bottom: 0;
+}
+.markdown p, .markdown img, .markdown video {
   margin-bottom: 0.5rem;
 }
 .markdown a {
@@ -669,53 +703,51 @@
 .markdown strong {
   font-weight: 500;
 }
-.markdown video {
-  margin-bottom: 0.75rem;
-}
 .markdown h1 {
   position: relative;
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: 1rem;
-  padding-bottom: 0rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .markdown h1::after {
   content: '';
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 50%;
   width: 100vw;
   height: 1px;
   background-color: black;
-  transform: translate(-50vw, 0.6rem);
+  transform: translateX(-50vw);
 }
 .markdown h2 {
   position: relative;
   font-size: 1.25rem;
   font-weight: 400;
   padding-top: 0.5rem;
-  padding-bottom: 0rem;
+  margin-bottom: 0.5rem;
 }
 .markdown h2::after {
   content: '';
   position: absolute;
-  top: 0rem;
-  left: -8px;
-  width: calc(100% + 16px);
+  top: 0;
+  left: calc(-1 * var(--markdown-pad));
+  width: calc(100% + 2 * var(--markdown-pad));
   height: 1px;
   background-color: black;
 }
 .markdown h3 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
+  margin-bottom: 0.5rem;
 }
 .markdown ul, .markdown ol {
   padding-left: 2rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.markdown ul li, .markdown ol li {
+.markdown li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 .markdown ul {
@@ -727,7 +759,7 @@
 .markdown table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin-bottom: 0.5rem;
 }
 .markdown th, .markdown td {
   border: 1px solid black;
@@ -744,12 +776,6 @@ mjx-container[display="true"] {
 }
 mjx-container[display="true"] > mjx-math {
   min-width: fit-content;
-}
-.aspect-\[2\/3\] {
-  aspect-ratio: 2/3;
-}
-.aspect-\[1\/1\.41\] {
-  aspect-ratio: 1/1.41;
 }
 @property --tw-rotate-x {
   syntax: "*";
