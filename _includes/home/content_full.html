@@ -27,22 +27,17 @@
                 </div>
                 
             </div>
-            <div class="sm:w-3/6 border-t sm:border-r sm:border-t-0 border-black flex flex-col justify-between p-2 h-full">
+            <div class="sm:flex-1 border-t sm:border-r sm:border-t-0 border-black flex flex-col justify-start p-2 h-full">
                 <!-- Text -->
                 <div class="markdown w-full font-[300] font-[Inter] text-justify break-words">
                     {{ post.abstract | markdownify }}
                 </div>
             </div>
-            <a href="{{ post.url }}" class="sm:w-1/6 border-t sm:border-t-0 flex flex-col justify-between p-2 h-full text-black bg-neutral-200 hover:text-white hover:bg-black">
-                <!-- Top-left text -->
-                <div class="font-medium font-[Inter] text-2xl self-start uppercase">
-                    See More
-                </div>
-
+            <a href="{{ post.url }}" class="group sm:w-24 border-t sm:border-t-0 flex flex-col justify-end p-2 h-full text-black bg-neutral-200 hover:bg-black">
                 <!-- Bottom-right arrow -->
                 <svg xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 416 416" fill="currentColor"
-                    class="w-16 h-16 self-end">
+                    class="fill-black group-hover:fill-white w-12 h-12 sm:w-20 sm:h-20 self-end">
                     <g transform="matrix(1,0,0,1,-812.451,-784.734)">
                         <g transform="matrix(0.46608,0.46608,-0.707107,0.707107,1037.7,-418.374)">
                             <path d="M1100,1043.6L1100,976.4L1748.84,976.4L1481.22,800L1621.4,800L1940,1010L1621.4,1220L1481.22,1220L1748.84,1043.6L1100,1043.6Z"/>
