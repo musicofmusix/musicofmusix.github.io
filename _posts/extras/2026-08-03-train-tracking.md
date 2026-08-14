@@ -46,4 +46,4 @@ Because raw (X, Y) coordinates are noisy, a [1 Euro Filter](https://gery.casiez.
 # Acknowledgements
 Many thanks to 이랑, 정호, 환준 for organising the workshop, and to all participants who showed off some seriously cool projects :)
 
-<img src="/assets/img/train-tracking/vertical-view.webp" class="w-full lg:w-1/2 -auto mx-auto">
+<img src="/assets/img/train-tracking/vertical-view.webp" class="w-full sm:w-1/2 -auto mx-auto">
